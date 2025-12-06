@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { AIConsultant } from './components/AIConsultant';
+import { WhatsAppWidget } from './components/WhatsAppWidget';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Products } from './pages/Products';
@@ -34,6 +35,7 @@ const App: React.FC = () => {
         </main>
         <Footer />
         <AIConsultant />
+        <WhatsAppWidget />
       </div>
     </Router>
   );
