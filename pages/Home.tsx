@@ -78,8 +78,13 @@ export const Home: React.FC = () => {
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
-               <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Steel Warehouse" className="rounded-lg shadow-lg w-full h-48 object-cover translate-y-8" />
-               <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800" alt="Construction Site" className="rounded-lg shadow-lg w-full h-48 object-cover" />
+               <div className="space-y-4 translate-y-8">
+                  <img src="https://lh3.googleusercontent.com/d/1I-ary1WpwrtM9ePi7-et7zhlfw2PMZJB" alt="Steel Inventory" className="rounded-lg shadow-lg w-full h-40 object-cover" />
+                  <img src="https://lh3.googleusercontent.com/d/16FnJ3hLg5ork_d_bU5xdEjUtlwf95uZz" alt="Steel Operations" className="rounded-lg shadow-lg w-full h-40 object-cover" />
+               </div>
+               <div>
+                  <img src="https://lh3.googleusercontent.com/d/122EJmpQKOhlcoo5iht-cxxRJfFZW70A8" alt="Logistics and Delivery" className="rounded-lg shadow-lg w-full h-full min-h-[300px] object-cover" />
+               </div>
             </div>
           </div>
         </div>

@@ -25,11 +25,11 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-4 group" onClick={closeMobileMenu}>
-            <div className={`relative transition-all duration-300 ${isScrolled ? 'h-16 w-16' : 'h-24 w-24 md:h-28 md:w-28'}`}>
+            <div className={`relative transition-all duration-300 ${isScrolled ? 'h-20 w-20' : 'h-32 w-32 md:h-40 md:w-40'}`}>
               <img 
                 src="https://lh3.googleusercontent.com/d/1EJqa4_Z1WioEz9qJfCqYI273-Jr31jbA" 
                 alt="Sree Dada Steel Traders Logo" 
-                className="h-full w-full object-contain"
+                className="h-full w-full object-contain mix-blend-multiply"
               />
             </div>
             <div className={`font-bold text-xl md:text-2xl uppercase tracking-tighter ${isScrolled || isMobileMenuOpen ? 'text-steel-900' : 'text-white'} group-hover:text-brand-orange transition-colors`}>
