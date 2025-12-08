@@ -2,7 +2,6 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
-import { AIConsultant } from './components/AIConsultant';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
@@ -34,7 +33,6 @@ const App: React.FC = () => {
           </Routes>
         </main>
         <Footer />
-        <AIConsultant />
         <WhatsAppWidget />
       </div>
     </Router>

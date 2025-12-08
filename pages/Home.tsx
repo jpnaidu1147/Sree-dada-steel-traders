@@ -122,8 +122,17 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Inventory & Warehouse Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative bg-white overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://lh3.googleusercontent.com/d/1jOgfd1jjkPlOXhblTYxz9WPizuQ27AP0=w600-h600" 
+            alt="Warehouse Background" 
+            className="w-full h-full object-cover opacity-30" 
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <span className="text-brand-orange font-bold uppercase tracking-wider text-sm">Our Stock</span>
             <h2 className="text-3xl md:text-4xl font-bold text-steel-900 mt-2 mb-4">Massive Inventory & Warehouse</h2>

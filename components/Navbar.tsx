@@ -80,7 +80,7 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-sm font-semibold uppercase tracking-wide transition-colors hover:text-brand-orange ${linkColorClass}`}
+                  className={`text-base font-bold uppercase tracking-wide transition-colors hover:text-brand-orange ${linkColorClass}`}
                 >
                   {link.label}
                 </Link>
