@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
+import { EMAIL } from '../constants';
 
 export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,8 +19,39 @@ export const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your enquiry. Our sales team will contact you shortly.');
-    setFormData({ name: '', phone: '', email: '', material: '', quantity: '', location: '', notes: '' });
+    
+    const subject = `Enquiry: ${formData.material || 'Steel Products'} - ${formData.name}`;
+    const body = `Hello Team,
+
+I am interested in purchasing steel products. Please find my requirements below:
+
+------------------------------------------------
+CUSTOMER DETAILS
+------------------------------------------------
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+
+------------------------------------------------
+ORDER REQUIREMENTS
+------------------------------------------------
+Material: ${formData.material}
+Quantity: ${formData.quantity}
+Delivery Location: ${formData.location}
+
+------------------------------------------------
+ADDITIONAL NOTES
+------------------------------------------------
+${formData.notes}
+
+Regards,
+${formData.name}`;
+
+    // Construct the mailto link
+    const mailtoLink = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -127,7 +159,7 @@ export const ContactForm: React.FC = () => {
           type="submit" 
           className="w-full bg-brand-orange text-white font-bold py-3 px-6 rounded hover:bg-orange-700 transition-colors flex items-center justify-center gap-2 mt-4"
         >
-          <Send size={18} /> Submit Enquiry
+          <Send size={18} /> Send Enquiry via Email
         </button>
       </div>
     </form>

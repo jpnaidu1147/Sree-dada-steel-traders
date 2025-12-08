@@ -1,19 +1,37 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
-
 export const getGeminiResponse = async (userPrompt: string): Promise<string> => {
+  let apiKey = process.env.API_KEY;
+
+  // Handle API Key selection for AI Studio environment if key is missing
+  if (!apiKey && typeof window !== 'undefined' && (window as any).aistudio) {
+    try {
+      const hasKey = await (window as any).aistudio.hasSelectedApiKey();
+      if (!hasKey) {
+        await (window as any).aistudio.openSelectKey();
+        return "Please select an API key in the popup window and try your request again.";
+      }
+    } catch (e) {
+      console.error("Error checking/selecting API key:", e);
+    }
+  }
+
+  // Re-check api key in case it was just injected
+  apiKey = process.env.API_KEY;
+
   if (!apiKey) {
-    return "AI Service is currently unavailable. Please contact our sales team directly.";
+    return "AI Service is currently unavailable. Please refresh the page and ensure you have selected a valid API Key.";
   }
 
   try {
+    // Initialize AI client on demand with the current API key
+    const ai = new GoogleGenAI({ apiKey });
+
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
       contents: userPrompt,
       config: {
-        systemInstruction: `You are an expert technical sales consultant for "Sree Dada Steel Traders", a steel distribution company in Bangalore. 
+        systemInstruction: `You are an expert technical sales consultant for "Shree Dada Steel Traders", a steel distribution company in Bangalore. 
         Your goal is to assist customers with steel requirements for construction, fabrication, and industrial use.
         
         Guidelines:
@@ -29,6 +47,6 @@ export const getGeminiResponse = async (userPrompt: string): Promise<string> => 
     return response.text || "I apologize, I couldn't generate a response. Please try again.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "I am having trouble connecting to the server. Please try again later or contact support.";
+    return "I am having trouble connecting to the AI server. Please try again later or contact support.";
   }
 };

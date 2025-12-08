@@ -1,7 +1,7 @@
 import React from 'react';
 import { COMPANY_NAME, ADDRESS, PHONE, EMAIL, NAV_LINKS } from '../constants';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Mail, MapPin, Phone as PhoneIcon } from 'lucide-react';
+import { Mail, MapPin, Phone as PhoneIcon } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -11,15 +11,15 @@ export const Footer: React.FC = () => {
           
           {/* Company Info */}
           <div>
-            <h3 className="text-white text-lg font-bold uppercase tracking-wider mb-6">{COMPANY_NAME}</h3>
+            <div className="mb-6 flex flex-col items-start gap-4">
+               <div className="bg-white p-2 rounded-lg inline-block">
+                  <img src="https://lh3.googleusercontent.com/d/1AyBQb0GKqO2xUSB8XO7eD7-rAwxEo8wG" alt="Sree Dada Steel Traders Logo" className="h-12 w-auto object-contain" />
+               </div>
+               <h3 className="text-white text-lg font-bold uppercase tracking-wider">{COMPANY_NAME}</h3>
+            </div>
             <p className="mb-6 text-sm leading-relaxed text-steel-400">
               Your trusted partner for quality steel supply in Bangalore. We cater to construction, infrastructure, and industrial fabrication needs with precision and reliability.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-brand-orange transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="hover:text-brand-orange transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="hover:text-brand-orange transition-colors"><Linkedin size={20} /></a>
-            </div>
           </div>
 
           {/* Quick Links */}

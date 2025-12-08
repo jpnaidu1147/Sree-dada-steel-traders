@@ -39,6 +39,17 @@ export const WhatsAppWidget: React.FC = () => {
 
   return (
     <>
+      {/* Label above the button - visible when chat is closed */}
+      {!isOpen && (
+         <div className="fixed z-[60] bottom-24 left-6 hidden md:block">
+            <div className="bg-white text-steel-900 px-4 py-2 rounded-lg shadow-xl border border-steel-100 relative">
+               <span className="font-bold text-sm whitespace-nowrap">Chat With Us</span>
+               {/* Arrow pointing down to the button */}
+               <div className="absolute -bottom-2 left-5 w-4 h-4 bg-white transform rotate-45 border-b border-r border-steel-100"></div>
+            </div>
+         </div>
+      )}
+
       {/* Floating Button - Positioned Left to avoid conflict with AI Consultant on the right */}
       <button 
         onClick={() => setIsOpen(!isOpen)}

@@ -159,7 +159,7 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
              <span className="text-brand-orange font-bold uppercase tracking-wider text-sm">Our Strength</span>
-             <h2 className="text-3xl md:text-4xl font-bold mt-2">Why Choose Sree Dada Steel?</h2>
+             <h2 className="text-3xl md:text-4xl font-bold mt-2">Why Choose Shree Dada Steel?</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
