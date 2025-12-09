@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
     name: 'Mild Steel Square Pipes (SHS)',
     category: 'Pipes & Tubes',
     description: 'Square Hollow Sections (SHS) combining high strength-to-weight ratio with a modern aesthetic. Ideal for furniture frames, architectural structures, and general fabrication.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/10Z_aFudImitihWinG6d_AUVzGZXFTo8j',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1CaVGqQXOeQ1HTR5qeEZ00tw-hkvciLO1',
     features: ['Uniform Corner Radius', 'Torsion Resistant', 'Aesthetic Finish', 'Lightweight Structure']
   },
   {
@@ -126,7 +126,7 @@ export const PRODUCTS: Product[] = [
     name: 'RHS Tubes (HR Tubes)',
     category: 'Pipes & Tubes',
     description: 'Rectangular Hollow Sections (RHS) manufactured from hot rolled coils. Provides superior structural efficiency for industrial sheds, bridges, and agricultural equipment.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1txgqUD9-amQd69tBJKUh4ZAeqGjGuwfm',
+    imageUrl: 'https://lh3.googleusercontent.com/d/10Z_aFudImitihWinG6d_AUVzGZXFTo8j',
     features: ['High Strength-to-Weight', 'Flat Surfaces', 'Easy to Join', 'Structural Efficiency']
   },
   {
