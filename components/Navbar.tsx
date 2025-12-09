@@ -7,7 +7,6 @@ export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,76 +18,62 @@ export const Navbar: React.FC = () => {
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
-  // Determine Navbar Background
-  // Home: Transparent at top, White when scrolled or mobile menu open
-  // Inner Pages: Always White
-  const navBackground = (isHome && !isMobileMenuOpen)
-    ? (isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4')
-    : 'bg-white/95 backdrop-blur-sm shadow-md py-2';
+  // Check if we are on the home page
+  const isHome = location.pathname === '/';
+  
+  // Navbar is transparent only on Home page when not scrolled and menu is closed
+  const isTransparent = isHome && !isScrolled && !isMobileMenuOpen;
 
-  // Determine Text Color for Logo & Mobile Menu Icon
-  // Home Top: White
-  // Scrolled / Inner Pages / Mobile Menu Open: Dark Steel
-  const baseTextColor = (isHome && !isScrolled && !isMobileMenuOpen) 
-    ? 'text-white' 
-    : 'text-steel-900';
+  // Navbar Background
+  const navBackground = isTransparent 
+    ? 'bg-transparent py-6' 
+    : 'bg-white/95 backdrop-blur-md shadow-md py-3 md:py-4';
 
-  // Determine Logo Size
-  // Home Top: Large
-  // Scrolled / Inner Pages / Mobile Menu Open: Compact
-  const logoSizeClass = (isHome && !isScrolled && !isMobileMenuOpen)
-    ? 'h-32 w-32 md:h-40 md:w-40'
-    : 'h-20 w-20';
+  // Element Colors based on state
+  const logoColor = isTransparent ? 'text-white' : 'text-steel-900';
+  const menuButtonColor = isTransparent ? 'text-white' : 'text-steel-900';
+
+  // Helper for link classes
+  const getLinkClasses = (path: string) => {
+    const isActive = location.pathname === path;
+    
+    if (isTransparent) {
+        return isActive 
+            ? 'text-brand-orange' 
+            : 'text-white/90 hover:text-white hover:scale-105';
+    }
+    
+    // Solid background state
+    return isActive 
+        ? 'text-brand-orange' 
+        : 'text-steel-700 hover:text-brand-orange';
+  };
 
   return (
     <nav className={`fixed w-full z-40 transition-all duration-300 ${navBackground}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-4 group" onClick={closeMobileMenu}>
-            <div className={`relative transition-all duration-300 ${logoSizeClass}`}>
-              <img 
-                src="https://lh3.googleusercontent.com/d/1AyBQb0GKqO2xUSB8XO7eD7-rAwxEo8wG" 
-                alt="Sree Dada Steel Traders Logo" 
-                className="h-full w-full object-contain mix-blend-multiply"
-              />
-            </div>
-            <div className={`font-bold text-xl md:text-2xl uppercase tracking-tighter transition-colors group-hover:text-brand-orange ${baseTextColor}`}>
+        <div className="flex justify-between items-center h-full">
+          {/* Logo - Text Only */}
+          <Link to="/" className="flex items-center gap-2 group" onClick={closeMobileMenu}>
+            <div className={`font-extrabold text-xl md:text-2xl uppercase tracking-tighter transition-colors ${logoColor} group-hover:text-brand-orange`}>
               {COMPANY_NAME}
             </div>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => {
-              const isActive = location.pathname === link.path;
-              // Link Color Logic:
-              // Active: Orange
-              // Home Top (Inactive): White
-              // Scrolled or Inner Page (Inactive): Dark Gray
-              let linkColorClass = '';
-              
-              if (isActive) {
-                linkColorClass = 'text-brand-orange';
-              } else if (isHome && !isScrolled) {
-                linkColorClass = 'text-steel-100';
-              } else {
-                linkColorClass = 'text-steel-700';
-              }
-
-              return (
+            {NAV_LINKS.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-base font-bold uppercase tracking-wide transition-colors hover:text-brand-orange ${linkColorClass}`}
+                  className={`text-sm md:text-base font-bold uppercase tracking-wide transition-all ${getLinkClasses(link.path)}`}
                 >
                   {link.label}
                 </Link>
-              );
-            })}
+            ))}
             <Link 
               to="/contact" 
-              className="bg-brand-orange text-white px-5 py-2 rounded-sm font-bold uppercase text-xs tracking-wider hover:bg-orange-700 transition-colors"
+              className="bg-brand-orange text-white px-6 py-2.5 rounded shadow-lg font-bold uppercase text-xs tracking-wider hover:bg-orange-700 transition-all hover:shadow-orange-900/20 transform hover:-translate-y-0.5"
             >
               Get a Quote
             </Link>
@@ -96,10 +81,10 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-brand-orange"
+            className={`md:hidden p-1 rounded-md transition-colors ${menuButtonColor}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} className={baseTextColor} />}
+            {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
       </div>
@@ -107,20 +92,27 @@ export const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-steel-100 animate-slide-down">
-          <div className="flex flex-col p-4 space-y-4">
+          <div className="flex flex-col p-6 space-y-6">
              {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={closeMobileMenu}
-                className={`text-lg font-medium ${
+                className={`text-lg font-bold uppercase tracking-wide ${
                   location.pathname === link.path ? 'text-brand-orange' : 'text-steel-800'
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-            <a href="tel:+919876543210" className="flex items-center gap-2 text-steel-600 pt-4 border-t border-steel-100">
+            <Link 
+              to="/contact" 
+              onClick={closeMobileMenu}
+              className="bg-brand-orange text-white px-5 py-3 rounded text-center font-bold uppercase tracking-wider"
+            >
+              Get a Quote
+            </Link>
+            <a href="tel:+919876543210" className="flex items-center justify-center gap-2 text-steel-600 pt-4 border-t border-steel-100">
               <Phone size={18} /> <span>+91 98765 43210</span>
             </a>
           </div>
