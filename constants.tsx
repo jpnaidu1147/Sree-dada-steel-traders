@@ -19,123 +19,123 @@ export const NAV_LINKS = [
 export const PRODUCTS: Product[] = [
   {
     id: 'p1',
-    name: 'TMT Rebars (Fe 550D)',
-    category: 'Construction Steel',
-    description: 'Premium quality Thermo-Mechanically Treated (TMT) bars featuring superior ductility and high yield strength. Ideal for critical infrastructure and residential projects requiring earthquake resistance.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1wNxuwVATUwvvTWB3hKMEmubeIHLx2Hgw',
-    features: ['Grades: Fe 500D, Fe 550D', 'IS: 1786 Certified', 'Excellent Weldability', 'Corrosion Resistant']
+    name: 'Chequered Plates',
+    category: 'Flooring & Safety',
+    description: 'Anti-skid mild steel plates with a raised diamond or teardrop pattern. Essential for industrial flooring, walkways, bus floors, and loading docks to ensure safety and durability.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1Fohz5UXSZxgJO2P0LfcGYAHDwzpZXE9T',
+    features: ['Anti-Slip Surface', 'High Wear Resistance', 'Uniform Pattern', 'Easy Maintenance']
   },
   {
     id: 'p2',
-    name: 'MS Angles',
-    category: 'Structural Steel',
-    description: 'L-shaped structural steel sections manufactured to IS: 2062 standards. Widely used in transmission towers, trusses, and general fabrication frameworks.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1C9DwT3OJT_swmFaXolFSkpcWtnSeO_rh',
-    features: ['Equal & Unequal Sizes', 'High Tensile Strength', 'Precision Dimensions', 'Structural Support']
+    name: 'Cold Rolled (CR) Sheet Coils',
+    category: 'Sheets & Coils',
+    description: 'Precision-finished Cold Rolled steel sheets and coils offering superior surface smoothness and tight dimensional tolerances. Ideal for automobile components, furniture, and precision engineering.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1uzY6odwtzNOW-yB7_CIBaiYRSLvRd8eg',
+    features: ['Superior Surface Finish', 'High Formability', 'Tight Tolerances', 'Uniform Thickness']
   },
   {
     id: 'p3',
-    name: 'MS Channels (ISMC)',
-    category: 'Structural Steel',
-    description: 'C-shaped channel sections providing excellent structural support for heavy machinery, truck bodies, and industrial sheds. Available in light and heavy weight categories.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1k24cmyK6EGs-k9kmnrMNb7B49bk-YqZe',
-    features: ['ISMC Standard Sizes', 'High Load Bearing', 'Uniform Thickness', 'Industrial Fabrication']
+    name: 'Colour Coated Sheet & Coils',
+    category: 'Roofing & Cladding',
+    description: 'Pre-painted galvanized steel (PPGI) sheets providing excellent corrosion resistance combined with aesthetic appeal. Widely used in modern roofing, wall cladding, and appliances.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1D7IueFTrv8WHRfrrrdDX2DlxsV_PUDCN',
+    features: ['Vibrant Colors', 'Corrosion Resistant', 'UV Protection', 'Long-lasting Finish']
   },
   {
     id: 'p4',
-    name: 'Universal Beams (I-Beams)',
-    category: 'Heavy Structural',
-    description: 'Heavy-duty I-section beams designed for major load-bearing applications in bridges, warehouses, and high-rise buildings. Offers superior strength-to-weight ratio.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1sntF4gfsT9pPwfWJTFSOBFxTFQ0mZjnM',
-    features: ['MB / NPB Sections', 'Maximum Durability', 'Span Capability', 'Structural Integrity']
+    name: 'GI Sheet & Coils',
+    category: 'Coated Steel',
+    description: 'Galvanized Iron (GI) sheets coated with a protective layer of zinc to prevent rust. Available in various coating masses (GSM) suitable for ducting, automotive parts, and paneling.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1fCF7c4E1gKphMcVQJfqaBsuGR6GBGGNz',
+    features: ['Zinc Coated (GSM 120+)', 'Rust Proof', 'Excellent Lock-Forming', 'Versatile Applications']
   },
   {
     id: 'p5',
-    name: 'MS Flats',
-    category: 'General Fabrication',
-    description: 'Versatile mild steel flat bars used in grating, fencing, gates, and earthing strips. Known for malleability and ease of welding.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/19VVWO2HPuVbHbDJ-bfu6mPf6RUmEBTox',
-    features: ['Smooth Surface Finish', 'Various Widths/Thickness', 'Easy Fabrication', 'Cost-Effective']
+    name: 'H Beams Sections',
+    category: 'Heavy Structural',
+    description: 'Parallel flange H-beams designed for heavy load-bearing applications. Their wider flanges provide better lateral support, making them perfect for columns in high-rise buildings and bridges.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1mkq-SWVdfdaVsqSqegXH3BfF4KNbEjuX',
+    features: ['Wide Flanges', 'Superior Load Bearing', 'Structural Stability', 'Efficient Joining']
   },
   {
     id: 'p6',
-    name: 'MS Square Bars',
-    category: 'Bright Bars',
-    description: 'Solid square steel bars used in manufacturing of crane rails, machine keys, and bright bar applications. Offers high precision and straightness.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/11RIpZg9rfs70eE2o2cxdPNRvY4-ws4sw',
-    features: ['Solid Cross-Section', 'Machining Grade', 'High Strength', 'Decorative Uses']
+    name: 'Hot Rolled (HR) Sheet Coils',
+    category: 'Sheets & Coils',
+    description: 'Hot Rolled steel coils suitable for heavy fabrication, pipe manufacturing, and industrial machinery. Known for excellent malleability and weldability at a cost-effective price point.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1EfQS5VpcAlrWhg_WWfr4SF2hiIRpw4he',
+    features: ['High Malleability', 'Good Weldability', 'Wide Thickness Range', 'Structural Grade']
   },
   {
     id: 'p7',
-    name: 'MS Round Pipes',
-    category: 'Pipes & Tubes',
-    description: 'ERW (Electric Resistance Welded) round pipes suitable for water lines, structural scaffolding, and fencing. Conforms to IS: 1239 / IS: 3589 standards.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1-DJ2RVMvx-lj9DPwWM8j1GMa-aQWXljg',
-    features: ['Leak Proof Tested', 'Smooth Internal Flow', 'Various Wall Thickness', 'Scaffolding Ready']
+    name: 'Hot Rolled Sheets & Plates',
+    category: 'Industrial Plates',
+    description: 'High-tensile MS plates produced through hot rolling. These plates are the backbone of heavy engineering, used in shipbuilding, storage tanks, pressure vessels, and base plates.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1QhSi-ekMXTqzREvpCYWWzNU7Koh2dpLV',
+    features: ['Boiler Quality Available', 'Custom Cut Sizes', 'High Tensile Strength', 'Heavy Fabrication']
   },
   {
     id: 'p8',
-    name: 'Square Hollow Sections (SHS)',
-    category: 'Pipes & Tubes',
-    description: 'Square steel tubes offering a modern aesthetic and efficient structural performance. Ideal for furniture, architectural frameworks, and automotive chassis.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1V-K09h3MTxcRlKe9ok68Smlhiamlfgf9',
-    features: ['Uniform Corner Radius', 'High Torsion Resistance', 'Aesthetic Finish', 'Lightweight']
+    name: 'ISMB Beams',
+    category: 'Structural Steel',
+    description: 'Indian Standard Medium Weight Beams (ISMB) offering excellent bending resistance. A staple in structural steel construction for support columns, girders, and industrial sheds.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/120Kz1UmEFlvYgaJYczVlHpdvom7sEVw4',
+    features: ['IS: 2062 Standards', 'High Bending Strength', 'Standard Section Weights', 'Construction Essential']
   },
   {
     id: 'p9',
-    name: 'Rectangular Hollow Sections (RHS)',
-    category: 'Pipes & Tubes',
-    description: 'Rectangular tubing extensively used in construction of industrial sheds, bridges, and agricultural equipment. Combines strength with functionality.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1LPfRrQGMOB8UPcyfijbntiRaAk1l90QV',
-    features: ['High Strength-to-Weight', 'Easy Joining/Welding', 'Structural Efficiency', 'Versatile Sizes']
+    name: 'Mild Steel Flat Bars',
+    category: 'General Fabrication',
+    description: 'Versatile flat steel bars with a smooth surface finish. Extensively used in the fabrication of gates, grills, railings, earthing strips, and machinery base plates.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1xmX-Nh68O9uRyEGBg4uZpqaj2SqpSzYP',
+    features: ['Sharp Edges', 'Easily Weldable', 'Various Widths', 'Cost-Effective']
   },
   {
     id: 'p10',
-    name: 'MS Plates',
-    category: 'Industrial Plates',
-    description: 'Hot rolled mild steel plates available in various thicknesses. Essential for heavy fabrication, ship building, pressure vessels, and base plates.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1QhSi-ekMXTqzREvpCYWWzNU7Koh2dpLV',
-    features: ['High Tensile Steel', 'Custom Cut Sizes', 'Boiler Quality Available', 'Heavy Engineering']
+    name: 'Mild Steel Square Pipes (SHS)',
+    category: 'Pipes & Tubes',
+    description: 'Square Hollow Sections (SHS) combining high strength-to-weight ratio with a modern aesthetic. Ideal for furniture frames, architectural structures, and general fabrication.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/10Z_aFudImitihWinG6d_AUVzGZXFTo8j',
+    features: ['Uniform Corner Radius', 'Torsion Resistant', 'Aesthetic Finish', 'Lightweight Structure']
   },
   {
     id: 'p11',
-    name: 'Chequered Plates',
-    category: 'Flooring',
-    description: 'Anti-skid steel plates with a raised diamond or teardrop pattern. Perfect for industrial walkways, stair treads, bus floors, and loading docks.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/10lrP48tqJaDduujl9HSNFHq8bRZqE080',
-    features: ['Anti-Slip Surface', 'Durable & Tough', 'Weather Resistant', 'Low Maintenance']
+    name: 'Mild Steel Angles',
+    category: 'Structural Steel',
+    description: 'L-shaped structural steel angles providing two-way support. Essential for brackets, transmission towers, framing, and reinforcement in various construction projects.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1gg_IaA3GI8u1yQf0ooEBYL6ELO26YKjV',
+    features: ['Equal & Unequal Legs', 'High Structural Rigidity', 'Easy Fabrication', 'Versatile Usage']
   },
   {
     id: 'p12',
-    name: 'GP Sheets & Coils',
-    category: 'Coated Steel',
-    description: 'Galvanized Plain (GP) steel sheets coated with zinc to prevent corrosion. Used in air conditioning ducts, panels, electrical appliances, and automotive parts.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1fCF7c4E1gKphMcVQJfqaBsuGR6GBGGNz',
-    features: ['Zinc Coated (GSM 120+)', 'Rust Protection', 'Formability', 'Shiny Surface']
+    name: 'Mild Steel Channels',
+    category: 'Structural Steel',
+    description: 'C-shaped structural channels (ISMC) designed for high load-bearing capacity. Widely used in vehicle chassis, industrial shed structures, and heavy machinery supports.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1_SqT1CgfCfyXYBjMuTyy20QGuice7R0Q',
+    features: ['U-Section Profile', 'Axial Load Bearing', 'Standard Sizes', 'Durable Construction']
   },
   {
     id: 'p13',
-    name: 'Binding Wire',
-    category: 'Construction Accessories',
-    description: 'Soft annealed mild steel wire used for tying reinforcing bars in construction. pliable yet strong enough to hold heavy steel mesh in place.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1u7nZkALGDMfef3bObnL3GL3-bqqbCiar',
-    features: ['Fully Annealed', 'Soft & Flexible', 'Uniform Gauge', 'Breakage Resistant']
+    name: 'Mild Steel Rounds',
+    category: 'Bright Bars & Rods',
+    description: 'Solid circular steel bars with high tensile strength. Used in machining, shaft manufacturing, anchor bolts, and various engineering applications requiring solid strength.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1aJV4emaWidPAKR4PzRFGU_l7Ppls9cmb',
+    features: ['Consistent Diameter', 'Machining Grade', 'High Tensile', 'Smooth Finish']
   },
   {
     id: 'p14',
-    name: 'Roofing Sheets',
-    category: 'Roofing Solutions',
-    description: 'Corrugated steel sheets providing durable roofing solutions for warehouses, parking sheds, and industrial units. Available in GC (Galvanized Corrugated) options.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1W00b3LWWN5LUe5W-5G4MYfnfMTbBSv-O',
-    features: ['Weather Proof', 'High Strength', 'Easy Installation', 'Long Lifespan']
+    name: 'RHS Tubes (HR Tubes)',
+    category: 'Pipes & Tubes',
+    description: 'Rectangular Hollow Sections (RHS) manufactured from hot rolled coils. Provides superior structural efficiency for industrial sheds, bridges, and agricultural equipment.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1txgqUD9-amQd69tBJKUh4ZAeqGjGuwfm',
+    features: ['High Strength-to-Weight', 'Flat Surfaces', 'Easy to Join', 'Structural Efficiency']
   },
   {
     id: 'p15',
-    name: 'Color Coated Profile Sheets',
-    category: 'Roofing Solutions',
-    description: 'Pre-painted galvanized steel sheets offering superior aesthetics and corrosion resistance. Popular for modern industrial roofing and wall cladding.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1NoNdwL45ej-vy_LRW7HvEX7fGFa2FygJ',
-    features: ['Vibrant Colors', 'UV Resistant Paint', 'Thermal Efficiency', 'Architectural Appeal']
+    name: 'Round Pipes & Tubes',
+    category: 'Pipes & Tubes',
+    description: 'ERW mild steel round pipes conforming to IS: 1239 / IS: 3589 standards. Suitable for water transport, structural scaffolding, fencing, and general fluid lines.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1Oz4iAUEGKKNGy7P3QY-fqTJvRa9Skipo',
+    features: ['Leak Proof', 'Smooth Flow', 'Pressure Tested', 'Scaffolding Ready']
   }
 ];
 
