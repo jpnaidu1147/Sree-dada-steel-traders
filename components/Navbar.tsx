@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NAV_LINKS, COMPANY_NAME } from '../constants';
+import { NAV_LINKS } from '../constants';
 import { Menu, X, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -26,39 +26,48 @@ export const Navbar: React.FC = () => {
 
   // Navbar Background
   const navBackground = isTransparent 
-    ? 'bg-transparent py-6' 
-    : 'bg-white/95 backdrop-blur-md shadow-md py-3 md:py-4';
-
-  // Element Colors based on state
-  const logoColor = isTransparent ? 'text-white' : 'text-steel-900';
-  const menuButtonColor = isTransparent ? 'text-white' : 'text-steel-900';
+    ? 'bg-transparent py-4'
+    : 'bg-steel-900/95 backdrop-blur-md shadow-md py-3 md:py-4';
 
   // Helper for link classes
   const getLinkClasses = (path: string) => {
     const isActive = location.pathname === path;
     
-    if (isTransparent) {
-        return isActive 
-            ? 'text-brand-orange' 
-            : 'text-white/90 hover:text-white hover:scale-105';
-    }
-    
-    // Solid background state
     return isActive 
         ? 'text-brand-orange' 
-        : 'text-steel-700 hover:text-brand-orange';
+        : 'text-gray-100 hover:text-white hover:scale-105';
   };
 
   return (
     <nav className={`fixed w-full z-40 transition-all duration-300 ${navBackground}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-full">
-          {/* Logo - Text Only */}
-          <Link to="/" className="flex items-center gap-2 group" onClick={closeMobileMenu}>
-            <div className={`font-extrabold text-xl md:text-2xl uppercase tracking-tighter transition-colors ${logoColor} group-hover:text-brand-orange`}>
-              {COMPANY_NAME}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="flex justify-between items-center h-full min-h-[60px]">
+          {/* Brand Area - Absolute & Overflowing Logo */}
+          <Link 
+            to="/" 
+            className="absolute top-0 left-4 md:left-8 z-50 group" 
+            onClick={closeMobileMenu}
+          >
+            <div className="w-24 h-24 md:w-40 md:h-40 rounded-full border-4 border-white shadow-2xl bg-white overflow-hidden transition-transform duration-300 group-hover:scale-105 mt-2">
+              <img 
+                src="https://lh3.googleusercontent.com/d/1wQIhasjAyEeBE5rPSpMb2qffIcxCCWkJ" 
+                alt="Shree Dada Steel Traders Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </Link>
+
+          {/* Company Name Text - Positioned to clear the logo */}
+          <div className="flex items-center ml-32 md:ml-52 z-40">
+            <Link to="/" onClick={closeMobileMenu} className="flex flex-col group">
+              <span className="text-white font-extrabold text-lg md:text-3xl uppercase tracking-wider leading-none drop-shadow-md group-hover:text-steel-100 transition-colors">
+                Shree Dada
+              </span>
+              <span className="text-brand-orange font-bold text-xs md:text-sm uppercase tracking-[0.2em] leading-tight group-hover:text-orange-400 transition-colors">
+                Steel Traders
+              </span>
+            </Link>
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
@@ -81,7 +90,7 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className={`md:hidden p-1 rounded-md transition-colors ${menuButtonColor}`}
+            className="md:hidden p-1 rounded-md transition-colors text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -91,15 +100,15 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-steel-100 animate-slide-down">
-          <div className="flex flex-col p-6 space-y-6">
+        <div className="md:hidden absolute top-full left-0 w-full bg-steel-900 shadow-xl border-t border-steel-800 animate-slide-down">
+          <div className="flex flex-col p-6 space-y-6 items-end text-right">
              {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={closeMobileMenu}
                 className={`text-lg font-bold uppercase tracking-wide ${
-                  location.pathname === link.path ? 'text-brand-orange' : 'text-steel-800'
+                  location.pathname === link.path ? 'text-brand-orange' : 'text-gray-100'
                 }`}
               >
                 {link.label}
@@ -108,11 +117,11 @@ export const Navbar: React.FC = () => {
             <Link 
               to="/contact" 
               onClick={closeMobileMenu}
-              className="bg-brand-orange text-white px-5 py-3 rounded text-center font-bold uppercase tracking-wider"
+              className="bg-brand-orange text-white px-5 py-3 rounded text-center font-bold uppercase tracking-wider w-full"
             >
               Get a Quote
             </Link>
-            <a href="tel:+919876543210" className="flex items-center justify-center gap-2 text-steel-600 pt-4 border-t border-steel-100">
+            <a href="tel:+919876543210" className="flex items-center justify-end gap-2 text-steel-400 pt-4 border-t border-steel-800 hover:text-white w-full">
               <Phone size={18} /> <span>+91 98765 43210</span>
             </a>
           </div>

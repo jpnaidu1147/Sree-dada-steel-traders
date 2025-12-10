@@ -12,9 +12,6 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="mb-6 flex flex-col items-start gap-4">
-               <div className="bg-white p-3 rounded-xl inline-block shadow-lg">
-                  <img src="https://lh3.googleusercontent.com/d/1iZq8BKGkVomyi5s32Qp6AN5V-8MjNGML" alt="Sree Dada Steel Traders Logo" className="h-20 w-auto object-contain" />
-               </div>
                <h3 className="text-white text-lg font-bold uppercase tracking-wider">{COMPANY_NAME}</h3>
             </div>
             <p className="mb-6 text-sm leading-relaxed text-steel-400">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PRODUCTS, CORE_VALUES, COMPANY_NAME } from '../constants';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const Home: React.FC = () => {
   const inventoryImages = [
@@ -12,6 +12,18 @@ export const Home: React.FC = () => {
     { src: "https://lh3.googleusercontent.com/d/1_qNPicg5V1E6rVMOm4hm62BCaa8WzLYf", label: "Heavy Structural Sections" },
     { src: "https://lh3.googleusercontent.com/d/1nacljezK7vsQPxoRmwaED49raPvF1ckc", label: "Large Diameter Tubes" },
     { src: "https://lh3.googleusercontent.com/d/1_CEnKeQzzsWWceTPIrUHv-K-cvYzJtU_", label: "Steel Plates & Sheets" },
+  ];
+
+  const brandLogos = [
+    "https://lh3.googleusercontent.com/d/1Bevz1jB_5KzyT2wUIsM6MuxpXxVm9bzX",
+    "https://lh3.googleusercontent.com/d/1_qCkSQ623Tcgd0OhkhE4XCpMkHmpiEDq",
+    "https://lh3.googleusercontent.com/d/1FBfDMWBiAucCmvlsrBK0jNir7B9FWdRG",
+    "https://lh3.googleusercontent.com/d/1K4jK_KbvHfCQxVTPlmI6NQFK2cwSO_MR",
+    "https://lh3.googleusercontent.com/d/1QeVw4UZz1-FjET2ffybFMD1xdY4lDW4j",
+    "https://lh3.googleusercontent.com/d/19-pVgSHq3fxEnCXM0q6Nmh1ym7EBLb_i",
+    "https://lh3.googleusercontent.com/d/1I7kRTCWSjwTfaCUcfsVtp0h-LFiRMsEK",
+    "https://lh3.googleusercontent.com/d/18cp5RPICoq4bAi9BFQzDvFp228sYQ-q7",
+    "https://lh3.googleusercontent.com/d/1qZRCboAUwtmrDRswEV0Gs_QOsQMatUql"
   ];
 
   return (
@@ -159,6 +171,78 @@ export const Home: React.FC = () => {
                   </div>
                 </div>
              ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Brands Section */}
+      <section className="py-20 bg-steel-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-brand-orange font-bold uppercase tracking-wider text-sm">Authorized Distributor</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-steel-900 mt-2 mb-4">Our Brands</h2>
+            <div className="h-1 w-20 bg-brand-orange mx-auto mb-6"></div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            {/* Text Content */}
+            <div className="lg:w-1/2 text-steel-700 space-y-4">
+              <p className="leading-relaxed">
+                Shree Dada Steel Traders is a trusted steel distribution and supply company serving the construction, infrastructure, and industrial sectors. As a multi-brand distributor, the company deals with India’s leading steel manufacturers including <span className="font-semibold text-steel-900">JSW, SAIL, JSPL, Tata Steel, AMNS, Posco, Apollo, Nezone, and Vizag Steel (RINL)</span> — ensuring consistent quality, reliability, and genuine materials for every client requirement.
+              </p>
+              
+              <div className="bg-white p-6 rounded-lg border-l-4 border-brand-blue shadow-sm my-6">
+                <p className="font-bold text-steel-900 mb-3">
+                  With a comprehensive product portfolio, we operate as a one-stop solution for all steel needs, offering:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
+                    <span>TMT Bars (all grades and diameters)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
+                    <span>Structural Steel — Angles, Channels, Beams, Flats, Rounds</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
+                    <span>Pipes & Tubes — MS pipes, Square/Rectangular hollow sections, Stainless steel pipes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
+                    <span>Sheets, Plates, Coils, and other raw materials</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
+                    <span>Industrial and fabrication steel supplies</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="leading-relaxed">
+                Backed by strong brand partnerships, efficient logistics, and customer-centric service, the company supports builders, contractors, fabricators, and industrial clients with timely deliveries and competitive pricing.
+              </p>
+              <p className="leading-relaxed font-bold text-steel-800 italic">
+                 "Shree Dada Steel Traders continues to grow as a dependable steel distribution partner, offering high-quality materials, a wide product range, and seamless supply for projects of any scale."
+              </p>
+            </div>
+
+            {/* Logo Grid */}
+            <div className="lg:w-1/2">
+              <div className="bg-white p-8 rounded-xl shadow-xl border border-steel-100">
+                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    {brandLogos.map((logo, index) => (
+                      <div key={index} className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:shadow-lg transition-all duration-300 border border-gray-100 h-32 group">
+                        <img 
+                          src={logo} 
+                          alt={`Partner Brand ${index + 1}`} 
+                          className="max-w-full max-h-full object-contain transition-transform duration-300 transform group-hover:scale-90" 
+                        />
+                      </div>
+                    ))}
+                 </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
