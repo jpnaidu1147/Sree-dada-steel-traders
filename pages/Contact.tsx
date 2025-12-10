@@ -7,7 +7,7 @@ export const Contact: React.FC = () => {
   return (
     <div className="w-full pt-20">
        <div className="bg-steel-900 py-16 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-end text-right">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl text-steel-300 max-w-2xl">
             Have a requirement or need a price quote? We’d be happy to assist you.
@@ -17,60 +17,82 @@ export const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Info Side */}
+          {/* Form Side - Now on Left */}
           <div>
+            <ContactForm />
+          </div>
+
+          {/* Info Side - Now on Right */}
+          <div className="text-right">
+            {/* Strategic Logo Placement - Aligned Right */}
+            <div className="mb-12 flex justify-center lg:justify-end">
+               <div className="relative group">
+                 {/* Decorative Glow */}
+                 <div className="absolute -inset-4 bg-brand-orange/20 blur-3xl rounded-full opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+                 
+                 {/* Image Container with Masking */}
+                 <div className="relative">
+                   <img 
+                     src="https://lh3.googleusercontent.com/d/1P5s2pb63hyG9mfeGZRh0pQthq3X0YdAu" 
+                     alt="Shree Dada Steel Traders Official Logo" 
+                     className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
+                   />
+                 </div>
+               </div>
+            </div>
+
             <h2 className="text-3xl font-bold text-steel-800 mb-8">Reach Out to Us</h2>
             
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
-                  <MapPin size={24} />
-                </div>
-                <div>
+            <div className="space-y-8 flex flex-col items-end">
+              <div className="flex items-start justify-end gap-4">
+                <div className="text-right">
                   <h3 className="font-bold text-lg text-steel-900">Location</h3>
                   <p className="text-steel-600 max-w-xs">{ADDRESS}</p>
                 </div>
+                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
+                  <MapPin size={24} />
+                </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
-                  <FileText size={24} />
-                </div>
-                <div>
+              <div className="flex items-start justify-end gap-4">
+                <div className="text-right">
                   <h3 className="font-bold text-lg text-steel-900">GSTIN</h3>
                   <p className="text-steel-600 font-mono">{GSTIN}</p>
                 </div>
+                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
+                  <FileText size={24} />
+                </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
-                  <PhoneIcon size={24} />
-                </div>
-                <div>
+              <div className="flex items-start justify-end gap-4">
+                <div className="text-right">
                   <h3 className="font-bold text-lg text-steel-900">Phone</h3>
                   <p className="text-steel-600">{PHONE}</p>
                   <p className="text-steel-500 text-sm">Mon-Sat 9am to 6pm</p>
                 </div>
+                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
+                  <PhoneIcon size={24} />
+                </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
-                  <Mail size={24} />
-                </div>
-                <div>
+              <div className="flex items-start justify-end gap-4">
+                <div className="text-right">
                   <h3 className="font-bold text-lg text-steel-900">Email</h3>
                   <p className="text-steel-600">{EMAIL}</p>
                 </div>
+                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
+                  <Mail size={24} />
+                </div>
               </div>
                
-              <div className="flex items-start gap-4">
-                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
-                  <Clock size={24} />
-                </div>
-                <div>
+              <div className="flex items-start justify-end gap-4">
+                <div className="text-right">
                   <h3 className="font-bold text-lg text-steel-900">Business Hours</h3>
                   <p className="text-steel-600">Monday - Saturday: 09:00 AM - 07:00 PM</p>
                   <p className="text-steel-600">Sunday: Closed</p>
+                </div>
+                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
+                  <Clock size={24} />
                 </div>
               </div>
             </div>
@@ -92,16 +114,11 @@ export const Contact: React.FC = () => {
                 href="https://maps.app.goo.gl/k6EcvzVzM4QRzhMw6" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="absolute bottom-4 right-4 bg-white text-brand-blue px-4 py-2 rounded shadow-lg font-bold text-sm hover:bg-brand-orange hover:text-white transition-all flex items-center gap-2 opacity-90 hover:opacity-100"
+                className="absolute bottom-4 left-4 bg-white text-brand-blue px-4 py-2 rounded shadow-lg font-bold text-sm hover:bg-brand-orange hover:text-white transition-all flex items-center gap-2 opacity-90 hover:opacity-100"
               >
                 <ExternalLink size={16} /> Open in Google Maps
               </a>
             </div>
-          </div>
-
-          {/* Form Side */}
-          <div>
-            <ContactForm />
           </div>
         </div>
       </div>

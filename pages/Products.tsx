@@ -80,7 +80,7 @@ export const Products: React.FC = () => {
 
       <div className="relative z-10">
         <div className="bg-steel-900 py-16 text-white relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-end text-right">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Products</h1>
             <p className="text-xl text-steel-300 max-w-2xl">
               Comprehensive range of ISI certified steel products for all construction and industrial needs.

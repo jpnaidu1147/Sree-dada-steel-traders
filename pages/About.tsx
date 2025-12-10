@@ -16,7 +16,7 @@ export const About: React.FC = () => {
       <div className="relative z-10">
         {/* Header - Transparent to show background */}
         <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-end text-right">
             <h1 className="text-4xl md:text-5xl font-bold text-steel-900 mb-4">About Us</h1>
             <p className="text-xl text-steel-700 max-w-2xl font-medium">Who We Are</p>
           </div>
@@ -25,7 +25,7 @@ export const About: React.FC = () => {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 text-left">
               <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-sm border border-white/50">
                 <h2 className="text-3xl font-bold text-steel-800 mb-6">Our Story</h2>
                 <p className="text-steel-600 mb-6 leading-relaxed">
@@ -47,15 +47,15 @@ export const About: React.FC = () => {
 
           {/* Vision & Mission */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
-            <div className="bg-white/90 backdrop-blur-sm p-8 shadow-lg border-t-4 border-brand-blue rounded-lg">
+            <div className="bg-white/90 backdrop-blur-sm p-8 shadow-lg border-t-4 border-brand-blue rounded-lg text-left">
               <h3 className="text-2xl font-bold text-steel-900 mb-4">Our Vision</h3>
               <p className="text-steel-600">
                 To be Karnataka’s most reliable and customer-focused steel trading company, delivering strength and value to every structure.
               </p>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm p-8 shadow-lg border-t-4 border-brand-orange rounded-lg">
+            <div className="bg-white/90 backdrop-blur-sm p-8 shadow-lg border-t-4 border-brand-orange rounded-lg text-left">
               <h3 className="text-2xl font-bold text-steel-900 mb-4">Our Mission</h3>
-              <ul className="list-disc list-inside text-steel-600 space-y-2">
+              <ul className="text-steel-600 space-y-2 flex flex-col items-start">
                 <li>To supply premium-grade steel with consistency</li>
                 <li>To build long-term relationships based on trust and service</li>
                 <li>To ensure competitive pricing and timely delivery</li>
@@ -88,7 +88,17 @@ export const About: React.FC = () => {
             
             {/* Director Block */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-              <div className="order-2 md:order-1 relative">
+              <div className="order-1 md:order-1 bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-sm text-left">
+                <h3 className="text-2xl font-bold text-steel-800 mb-4">Visionary Leadership</h3>
+                <p className="text-steel-600 leading-relaxed mb-6">
+                  Our leadership is defined by decades of industry expertise and a steadfast commitment to ethical business practices. The director of Sree Dada Steel Traders ensures that every strategic decision aligns with our core mission of quality and reliability, fostering a culture of excellence that permeates every level of the organization.
+                </p>
+                <div className="flex gap-2 justify-start">
+                  <div className="h-2 w-16 bg-brand-orange rounded-full"></div>
+                  <div className="h-2 w-4 bg-brand-blue rounded-full"></div>
+                </div>
+              </div>
+              <div className="order-2 md:order-2 relative">
                 <div className="absolute -inset-4 bg-white/40 rounded-lg -z-10 transform -rotate-2"></div>
                 <img 
                   src="https://lh3.googleusercontent.com/d/1Qs6REp1I-vGBt7YArg8zb15NTX2FtraD" 
@@ -96,26 +106,16 @@ export const About: React.FC = () => {
                   className="rounded-lg shadow-lg w-full h-[400px] object-cover object-top"
                 />
               </div>
-              <div className="order-1 md:order-2 bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-sm">
-                <h3 className="text-2xl font-bold text-steel-800 mb-4">Visionary Leadership</h3>
-                <p className="text-steel-600 leading-relaxed mb-6">
-                  Our leadership is defined by decades of industry expertise and a steadfast commitment to ethical business practices. The director of Sree Dada Steel Traders ensures that every strategic decision aligns with our core mission of quality and reliability, fostering a culture of excellence that permeates every level of the organization.
-                </p>
-                <div className="flex gap-2">
-                  <div className="h-2 w-16 bg-brand-orange rounded-full"></div>
-                  <div className="h-2 w-4 bg-brand-blue rounded-full"></div>
-                </div>
-              </div>
             </div>
 
             {/* Team/Reception Block */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-sm">
+              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-sm order-1 md:order-1 text-left">
                 <h3 className="text-2xl font-bold text-steel-800 mb-4">Dedicated Customer Support</h3>
                 <p className="text-steel-600 leading-relaxed mb-6">
                   Our front-office and logistics teams are the backbone of our customer service. We pride ourselves on creating a welcoming and professional environment where your queries are addressed promptly. From the initial consultation to final delivery, our staff ensures a seamless and hassle-free experience.
                 </p>
-                <ul className="space-y-3 text-steel-700 font-medium">
+                <ul className="space-y-3 text-steel-700 font-medium flex flex-col items-start">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-brand-blue rounded-full"></div>
                     Professional Consultation
@@ -130,7 +130,7 @@ export const About: React.FC = () => {
                   </li>
                 </ul>
               </div>
-              <div className="relative">
+               <div className="relative order-2 md:order-2">
                 <div className="absolute -inset-4 bg-white/40 rounded-lg -z-10 transform rotate-2"></div>
                 <img 
                   src="https://lh3.googleusercontent.com/d/1nD76JwzZrbUsKxxUEypVhUEr7nG5Pmub" 
@@ -144,7 +144,7 @@ export const About: React.FC = () => {
           {/* Infrastructure Highlights */}
           <div className="mt-24 bg-steel-900/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-white shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="text-left">
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">Robust Infrastructure</h2>
                 <p className="text-steel-300 mb-6 leading-relaxed">
                   We have invested significantly in building a robust infrastructure that supports our large-scale operations. Our warehousing and logistics capabilities are designed to handle bulk requirements efficiently.

@@ -5,7 +5,7 @@ export const COMPANY_NAME = "Shree Dada Steel Traders";
 export const TAGLINE = "Strength That Builds the Future";
 export const ADDRESS = "Municipal No.385, & 386, 10th Cross, 4th Main Peenya Industrial Area, Bengaluru, Karnataka - 560 058";
 export const PHONE = "8904310854, 9886082044";
-export const EMAIL = "shreedadasteel@gmail.com";
+export const EMAIL = "info@shreedadasteel.com";
 export const GSTIN = "29ADCFS9187R1ZT";
 
 export const NAV_LINKS = [

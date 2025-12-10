@@ -73,22 +73,7 @@ export const Home: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="h-1 w-12 bg-brand-orange"></div>
-                <span className="text-brand-orange font-bold uppercase tracking-wider text-sm">Since 1998</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-steel-900 mb-6">25+ Years of Excellence</h2>
-              <p className="text-steel-600 mb-6 leading-relaxed">
-                Sree Dada Steel Traders is one of Bangalore’s trusted names in steel trading and distribution. With over 25 years of industry expertise, we supply high-quality steel materials to construction companies, fabricators, infrastructure developers, and commercial projects across Karnataka.
-              </p>
-              <p className="text-steel-800 font-medium mb-8">
-                 Our commitment is simple — Quality Products. Timely Delivery. Competitive Pricing.
-              </p>
-              <Link to="/about" className="text-brand-blue font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                Read More About Us <ArrowRight size={20} />
-              </Link>
-            </div>
+            {/* Swapped Columns: Images First */}
             <div className="grid grid-cols-2 gap-4">
                <div className="space-y-4 translate-y-8">
                   <img src="https://lh3.googleusercontent.com/d/1I-ary1WpwrtM9ePi7-et7zhlfw2PMZJB" alt="Steel Inventory" className="rounded-lg shadow-lg w-full h-40 object-cover" />
@@ -97,6 +82,26 @@ export const Home: React.FC = () => {
                <div>
                   <img src="https://lh3.googleusercontent.com/d/122EJmpQKOhlcoo5iht-cxxRJfFZW70A8" alt="Logistics and Delivery" className="rounded-lg shadow-lg w-full h-full min-h-[300px] object-cover" />
                </div>
+            </div>
+            
+            {/* Swapped Columns: Text Second (Right Aligned) */}
+            <div className="text-right">
+              <div className="flex items-center justify-end gap-2 mb-4">
+                <span className="text-brand-orange font-bold uppercase tracking-wider text-sm">Since 1998</span>
+                <div className="h-1 w-12 bg-brand-orange"></div>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-steel-900 mb-6">25+ Years of Excellence</h2>
+              <p className="text-steel-600 mb-6 leading-relaxed">
+                Sree Dada Steel Traders is one of Bangalore’s trusted names in steel trading and distribution. With over 25 years of industry expertise, we supply high-quality steel materials to construction companies, fabricators, infrastructure developers, and commercial projects across Karnataka.
+              </p>
+              <p className="text-steel-800 font-medium mb-8">
+                 Our commitment is simple — Quality Products. Timely Delivery. Competitive Pricing.
+              </p>
+              <div className="flex justify-end">
+                <Link to="/about" className="text-brand-blue font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                  Read More About Us <ArrowRight size={20} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -185,8 +190,8 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12 items-start">
-            {/* Text Content */}
-            <div className="lg:w-1/2 text-steel-700 space-y-4">
+            {/* Text Content - Swapped to Left */}
+            <div className="lg:w-1/2 text-steel-700 space-y-4 text-left">
               <p className="leading-relaxed">
                 Shree Dada Steel Traders is a trusted steel distribution and supply company serving the construction, infrastructure, and industrial sectors. As a multi-brand distributor, the company deals with India’s leading steel manufacturers including <span className="font-semibold text-steel-900">JSW, SAIL, JSPL, Tata Steel, AMNS, Posco, Apollo, Nezone, and Vizag Steel (RINL)</span> — ensuring consistent quality, reliability, and genuine materials for every client requirement.
               </p>
@@ -227,7 +232,7 @@ export const Home: React.FC = () => {
               </p>
             </div>
 
-            {/* Logo Grid */}
+            {/* Logo Grid - Swapped to Right */}
             <div className="lg:w-1/2">
               <div className="bg-white p-8 rounded-xl shadow-xl border border-steel-100">
                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6">

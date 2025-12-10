@@ -18,7 +18,7 @@ export const Services: React.FC = () => {
       <div className="relative z-10">
         {/* Header - Transparent to show background */}
         <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-end text-right">
             <h1 className="text-4xl md:text-5xl font-bold text-steel-900 mb-4">Services</h1>
             <p className="text-xl text-steel-700 max-w-2xl font-medium">
               Empowering various sectors with robust steel supply chain solutions.
