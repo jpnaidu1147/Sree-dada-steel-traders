@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContactForm } from '../components/ContactForm';
 import { ADDRESS, PHONE, EMAIL, GSTIN } from '../constants';
-import { MapPin, Phone as PhoneIcon, Mail, Clock, FileText, ExternalLink } from 'lucide-react';
+import { MapPin, Phone as PhoneIcon, Smartphone, Mail, Clock, FileText, ExternalLink } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   return (
@@ -62,12 +62,24 @@ export const Contact: React.FC = () => {
 
               <div className="flex items-start justify-start gap-4">
                 <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
+                  <Smartphone size={24} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-steel-900">Phone (Mobile)</h3>
+                  {PHONE.split(',').map((num, index) => (
+                    <p key={index} className="text-steel-600">{num.trim()}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex items-start justify-start gap-4">
+                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
                   <PhoneIcon size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-steel-900">Phone</h3>
-                  <p className="text-steel-600">{PHONE}</p>
-                  <p className="text-steel-500 text-sm">Mon-Sat 9am to 6pm</p>
+                  <h3 className="font-bold text-lg text-steel-900">Landline</h3>
+                  <p className="text-steel-600">080-41242343</p>
+                  <p className="text-steel-600">080-48354720</p>
                 </div>
               </div>
 
@@ -87,7 +99,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-steel-900">Business Hours</h3>
-                  <p className="text-steel-600">Monday - Saturday: 09:00 AM - 07:00 PM</p>
+                  <p className="text-steel-600">Monday - Saturday: 09:30 AM - 06:30 PM</p>
                   <p className="text-steel-600">Sunday: Closed</p>
                 </div>
               </div>
