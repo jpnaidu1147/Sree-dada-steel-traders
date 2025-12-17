@@ -39,14 +39,85 @@ export const Contact: React.FC = () => {
 
             <h2 className="text-3xl font-bold text-steel-800 mb-8">Reach Out to Us</h2>
             
-            <div className="space-y-8 flex flex-col items-start">
-              <div className="flex items-start justify-start gap-4">
-                <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue">
-                  <MapPin size={24} />
+            <div className="space-y-12 flex flex-col items-start w-full">
+              
+              {/* Unit 1 Section */}
+              <div className="flex flex-col w-full gap-6">
+                <div className="flex items-start justify-start gap-4">
+                  <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue shrink-0">
+                    <MapPin size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-steel-900 mb-1">UNIT-1</h3>
+                    <div className="text-steel-600 max-w-sm space-y-1 text-sm md:text-base uppercase">
+                      <p className="font-bold text-steel-800">SHREE DADA STEEL TRADERS</p>
+                      <p>#309/1, MARIYAPPA COMPLEX, 8TH CROSS, 4TH PHASE,</p>
+                      <p>NEAR MARIYAPPA KALYANA MANTAPA,</p>
+                      <p>PEENYA INDUSTRIAL AREA, BANGALORE - 560058</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg text-steel-900">Location</h3>
-                  <p className="text-steel-600 max-w-xs">{ADDRESS}</p>
+                {/* Unit 1 Map */}
+                <div className="w-full h-80 rounded-lg overflow-hidden relative group shadow-lg border border-steel-300 md:ml-16">
+                  <iframe 
+                    src="https://maps.google.com/maps?q=13.02127997642718,77.51581177044903&t=k&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={true} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Shree Dada Steel Traders Unit-1 Location"
+                    className="grayscale group-hover:grayscale-0 transition-all duration-500"
+                  ></iframe>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=13.02127997642718,77.51581177044903" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="absolute bottom-4 left-4 bg-white text-brand-blue px-4 py-2 rounded shadow-lg font-bold text-sm hover:bg-brand-orange hover:text-white transition-all flex items-center gap-2 opacity-90 hover:opacity-100"
+                  >
+                    <ExternalLink size={16} /> Open in Google Maps
+                  </a>
+                </div>
+              </div>
+
+              {/* Unit 2 Section */}
+              <div className="flex flex-col w-full gap-6">
+                <div className="flex items-start justify-start gap-4">
+                  <div className="bg-brand-blue/10 p-3 rounded-full text-brand-blue shrink-0">
+                    <MapPin size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-steel-900 mb-1">UNIT-2</h3>
+                    <div className="text-steel-600 max-w-sm space-y-1 text-sm md:text-base uppercase">
+                      <p className="font-bold text-steel-800">SHREE DADA STEEL TRADERS</p>
+                      <p>UNIT 2 MUNICIPAL NO 385 & 386</p>
+                      <p>10TH CROSS, 4TH PHASE PEENYA INDUSTRIAL AREA,</p>
+                      <p>BANGALORE-560058</p>
+                    </div>
+                  </div>
+                </div>
+                {/* Unit 2 Map */}
+                <div className="w-full h-80 rounded-lg overflow-hidden relative group shadow-lg border border-steel-300 md:ml-16">
+                  <iframe 
+                    src="https://maps.google.com/maps?q=13.021127548752265,77.51152088008072&t=k&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={true} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Shree Dada Steel Traders Unit-2 Location"
+                    className="grayscale group-hover:grayscale-0 transition-all duration-500"
+                  ></iframe>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=13.021127548752265,77.51152088008072" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="absolute bottom-4 left-4 bg-white text-brand-blue px-4 py-2 rounded shadow-lg font-bold text-sm hover:bg-brand-orange hover:text-white transition-all flex items-center gap-2 opacity-90 hover:opacity-100"
+                  >
+                    <ExternalLink size={16} /> Open in Google Maps
+                  </a>
                 </div>
               </div>
 
@@ -105,66 +176,7 @@ export const Contact: React.FC = () => {
               </div>
             </div>
 
-            {/* Maps Container */}
-            <div className="mt-12 space-y-8">
-              
-              {/* Unit 1 Location Map */}
-              <div>
-                <h3 className="font-bold text-lg text-steel-900 mb-3 flex items-center gap-2">
-                  <MapPin size={20} className="text-brand-orange"/> Shree Dada Steel Traders Unit-1
-                </h3>
-                <div className="bg-steel-200 h-64 rounded-lg overflow-hidden relative group shadow-inner border border-steel-300">
-                  <iframe 
-                    src="https://maps.google.com/maps?q=13.02127997642718,77.51581177044903&t=k&z=15&ie=UTF8&iwloc=&output=embed"
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen={true} 
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Shree Dada Steel Traders Unit-1 Location"
-                    className="grayscale group-hover:grayscale-0 transition-all duration-500"
-                  ></iframe>
-                  <a 
-                    href="https://www.google.com/maps/search/?api=1&query=13.02127997642718,77.51581177044903" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="absolute bottom-4 left-4 bg-white text-brand-blue px-4 py-2 rounded shadow-lg font-bold text-sm hover:bg-brand-orange hover:text-white transition-all flex items-center gap-2 opacity-90 hover:opacity-100"
-                  >
-                    <ExternalLink size={16} /> Open in Google Maps
-                  </a>
-                </div>
-              </div>
-
-              {/* Unit 2 Location Map */}
-              <div>
-                <h3 className="font-bold text-lg text-steel-900 mb-3 flex items-center gap-2">
-                  <MapPin size={20} className="text-brand-orange"/> Shree Dada Steel Traders Unit-2
-                </h3>
-                <div className="bg-steel-200 h-64 rounded-lg overflow-hidden relative group shadow-inner border border-steel-300">
-                  <iframe 
-                    src="https://maps.google.com/maps?q=13.021127548752265,77.51152088008072&t=k&z=15&ie=UTF8&iwloc=&output=embed"
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen={true} 
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Shree Dada Steel Traders Unit-2 Location"
-                    className="grayscale group-hover:grayscale-0 transition-all duration-500"
-                  ></iframe>
-                  <a 
-                    href="https://www.google.com/maps/search/?api=1&query=13.021127548752265,77.51152088008072" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="absolute bottom-4 left-4 bg-white text-brand-blue px-4 py-2 rounded shadow-lg font-bold text-sm hover:bg-brand-orange hover:text-white transition-all flex items-center gap-2 opacity-90 hover:opacity-100"
-                  >
-                    <ExternalLink size={16} /> Open in Google Maps
-                  </a>
-                </div>
-              </div>
-
-            </div>
+            {/* Old Map Container Removed */}
           </div>
 
           {/* Form Side - Right */}
